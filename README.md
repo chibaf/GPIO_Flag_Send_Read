@@ -5,9 +5,9 @@ sending GPIO flags to another RasPi via socket
 
 programs positions:
 
-GPIO_flag_read_class.py,read_main.py: on RasPi2
+read flags: GPIO_flag_read_class.py,read_main.py: on RasPi2
 
-GPIO_flag_send_class.py,send_main.py: on RasPi1
+send flags: GPIO_flag_send_class.py,send_main.py: on RasPi1
 
 usage:
 
