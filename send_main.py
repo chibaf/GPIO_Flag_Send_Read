@@ -6,12 +6,12 @@ host = '192.168.0.11'   # server ip address
 port = 9988  #poert number
 
 gpio_flag=GPIO_flag_send(host,port)  # establish socket connection
-s = gpio_flag.Socket
+s = gpio_flag.Socket  # socket
 
 flags=[0]*16  # flag data for GPIO
 i=0
 while True:   # sending flags via socket
-  sleep(2)
+  sleep(1)
   i=i+1
   flags[0]=i % 10
-  gpio_flag.flag_send(s,flags)
+  gpio_flag.flag_send(s,flags)  # send flags to RasPi via socket
