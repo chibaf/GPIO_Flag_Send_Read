@@ -1,10 +1,5 @@
 class GPIO_flag_read:
 
-#  import socket
-
-#host = '192.168.0.11'  # server ip address
-#port = 9988
-
   def __init__(self,host,port):   # set up socket
     import socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -23,7 +18,6 @@ class GPIO_flag_read:
     return conn
 
   def dataTransfer(self,conn):  # receive data from client via socket
-#    while True:
       data = conn.recv(1024) # receive the data
       data = data.decode('utf-8')
       flags = [int(val) for val in data.split(",")]  # devide line into flags
