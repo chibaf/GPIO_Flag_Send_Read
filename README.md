@@ -15,6 +15,8 @@ python3 read_main.py (on RasPi2)
 
 python3 send_main.py (on RasPi1)
 
+where the ip address of RasPi2 is required.
+
 # ref: 
 
 chibaf/socket_exercise_1: socket on tcp/ip https://github.com/chibaf/socket_exercise_1
