@@ -13,9 +13,9 @@ class GPIO_flag_send:
     import socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # establish socket connection
     s.connect((host, port))
-    self.Socket=s
+    self.Socket=s #socket
     
   def flag_send(self,s,flags):
     line=mkline(flags)
-    s.send(str.encode(line))
+    s.send(str.encode(line))  #send flags
 
