@@ -1,12 +1,12 @@
 import socket
 from time import sleep
-import GPIO_flag_send_class
+from GPIO_flag_send_class import GPIO_flag_send
 
 host = '192.168.0.11'   # server ip address
 port = 9988
 
 gpio_flag=GPIO_flag_send(host,port)
-s = gpio_flag.s  # establish socket connection
+s = gpio_flag.Socket  # establish socket connection
 
 flags=[0]*16
 while True:   # sending flags via socket

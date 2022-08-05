@@ -9,12 +9,11 @@ def mkline(flags):  # pack flags into a line
 
 class GPIO_flag_send:
 
-  import socket
-
   def __init__(self,host,port):
+    import socket
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)  # establish socket connection
     s.connect((host, port))
-    return self.s
+    self.Socket=s
     
   def flag_send(self,s,flags):
     line=mkline(flags)
