@@ -7,6 +7,12 @@ GPIO_flag_read_class.py,read_main.py: on RasPi2
 
 GPIO_flag_send_class.py,send_main.py: on RasPi1
 
+usage:
+
+python3 read_main.py (on RasPi2)
+
+python3 send_main.py (on RasPi1)
+
 # ref: 
 
 chibaf/socket_exercise_1: socket on tcp/ip
