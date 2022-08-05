@@ -8,6 +8,7 @@ port = 9988
 read_socket=GPIO_flag_read(host,port)
 s=read_socket.Socket
 
+conn = read_socket.setupConnection(s)
 while True: # read data via socket
-  conn = read_socket.setupConnection(s)
-  read_socket.dataTransfer(conn)
+  data=read_socket.dataTransfer(conn)
+  print(data)

@@ -23,9 +23,8 @@ class GPIO_flag_read:
     return conn
 
   def dataTransfer(self,conn):  # receive data from client via socket
-    while True:
-        data = conn.recv(1024) # receive the data
-        data = data.decode('utf-8')
-        flags = [str(val) for val in data.split(",")]  # devide line into flags
-        print(flags)
-#    conn.close()
+#    while True:
+      data = conn.recv(1024) # receive the data
+      data = data.decode('utf-8')
+      flags = [int(val) for val in data.split(",")]  # devide line into flags
+      return(flags)
